@@ -2,12 +2,13 @@
 using BanjoLoan;
 using static BanjoLoan.LoanSummaryDto;
 
-Console.WriteLine("Hello, World!");
 var applications = new[]
 {
-    new LoanApplication("C001", 1000m),
-    new LoanApplication("C002", 2000m),
-    new LoanApplication("C001", 1500m)
+    new LoanApplication("C001", 10.5m),
+    new LoanApplication("C001", 5_000m),
+    new LoanApplication("C002", 7_000m),
+    new LoanApplication(string.Empty, 800m),
+    new LoanApplication("C003", -0.01m)
 };
 
 var summary = LoanSummaryCalc.CreateSummary(applications);
